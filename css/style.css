@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Raleway', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	text-align: center;
+	border: 2px solid #ccc;
+}
+
+header h1 {
+	text-transform: uppercase;
+}
+
+header ul {
+	list-style: none;
+}
+
+header ul li {
+	display: inline-block;
+	padding: 10px 20px;
+}
+
+header ul li a {
+	color: #555;
+}
+
+section#banner {
+	background-image: url('../img/jane.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 73vh;
+}
+
+main#about {
+	text-align: center;
+}
+
+main#about p {
+	font-weight: bolder;
+}
+
+main#about sub {
+	display: block;
+}
+
+main#about img {
+	width: 250px;
+	height: 200px;
+}
+
+main#music {
+	width: 900px;
+	margin: 0 auto;	
+}
+
+footer p {
+	padding: 10px;
+	margin: 0;
+	background-color: #f2f2f2;
+	text-align: center;
+}
+
+/* Home V2 */
+section#concept,
+section#songs,
+main#contact {
+	width: 900px;
+	margin: 30px auto;
+}
+
+.duas-colunas {
+	overflow: hidden;
+}
+
+.duas-colunas>div {
+	width: 50%;
+	float: left;
+}
+
+section#songs img {
+	width: 100%;
+}
+
+section#form-mapa iframe {
+	width: 100%;
+	height: 400px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+	width: 100%;
+	padding: 3px;
+	margin: 2px 0 10px;
+}
+
+form textarea {
+	resize: none;
+	height: 100px;
+}
+
+.form-group {
+	width: 90%;
+}
+
+button {
+	color: white;
+	background-color: orange;
+	padding: 5px 20px;
+	border: none;
+}
+
+.map {
+	padding-left: 20px;
+}
