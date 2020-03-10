@@ -1,125 +1,227 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap');
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-	font-family: 'Raleway', sans-serif;
-	margin: 0;
-	padding: 0;
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 header {
-	text-align: center;
-	border: 2px solid #ccc;
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  background-color: white;
+  /* border: 2px solid #ccc; */
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+  top: 0;
+  left: 0;
 }
 
 header h1 {
-	text-transform: uppercase;
+  text-transform: uppercase;
 }
 
-header ul {
-	list-style: none;
+nav ul {
+  list-style: none;
+  padding: 0;
 }
 
-header ul li {
-	display: inline-block;
-	padding: 10px 20px;
+nav ul li {
+  display: inline-block;
+  padding: 10px 20px;
 }
 
-header ul li a {
-	color: #555;
+nav ul li a {
+  text-decoration: none;
+  color: #555;
 }
 
 section#banner {
-	background-image: url('../img/jane.jpg');
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	width: 100%;
-	height: 73vh;
-}
-
-main#about {
-	text-align: center;
-}
-
-main#about p {
-	font-weight: bolder;
-}
-
-main#about sub {
-	display: block;
-}
-
-main#about img {
-	width: 250px;
-	height: 200px;
-}
-
-main#music {
-	width: 900px;
-	margin: 0 auto;	
+  background-image: url('../img/jane.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 73vh;
 }
 
 footer p {
-	padding: 10px;
-	margin: 0;
-	background-color: #f2f2f2;
-	text-align: center;
+  padding: 10px;
+  margin: 0;
+  background-color: #f2f2f2;
+  text-align: center;
 }
 
-/* Home V2 */
+
+
+/* about */
+
+main#about {
+  text-align: center;
+}
+
+main#about h2 {
+  font-size: 30px;
+}
+
+main#about img {
+  width: 450px;
+  margin: 20px auto;
+}
+
+main#about p cite {
+  display: block;
+  font-size: 22px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 40px;
+}
+
+/* home v2 */
+
 section#concept,
+main#music,
 section#songs,
 main#contact {
-	width: 900px;
-	margin: 30px auto;
-}
-
-.duas-colunas {
-	overflow: hidden;
-}
-
-.duas-colunas>div {
-	width: 50%;
-	float: left;
+  width: 900px;
+  margin: 30px auto;
+  max-width: 100%;
 }
 
 section#songs img {
-	width: 100%;
+  width: 100%;
 }
 
+.duas-colunas {
+  overflow: hidden;
+}
+
+.duas-colunas>div {
+  width: 50%;
+  float: left;
+}
+
+section#songs ol li {
+  padding: 15px 0;
+}
+
+section#songs ol li strong {
+  color: orange;
+}
+
+/* contact v2 */
+
 section#form-mapa iframe {
-	width: 100%;
-	height: 400px;
+  width: 100%;
+  height: 400px;
 }
 
 form input[type="text"],
-form input[type="email"],
 form textarea {
-	width: 100%;
-	padding: 3px;
-	margin: 2px 0 10px;
+  width: 100%;
+  padding: 5px;
+}
+
+form .form-group {
+  margin: 0 0 10px;
 }
 
 form textarea {
-	resize: none;
-	height: 100px;
+  resize: none;
+  height: 100px;
 }
 
-.form-group {
-	width: 90%;
+form button {
+  border: none;
+  padding: 5px 20px;
+  background-color: orange;
+  color: white;
 }
 
-button {
-	color: white;
-	background-color: orange;
-	padding: 5px 20px;
-	border: none;
+.mapa {
+  padding-left: 20px;
 }
 
-.map {
-	padding-left: 20px;
+/* Estilo geral */
+
+
+/* responsividade */
+
+@media(max-width: 900px) {
+  section#concept,
+  sections#songs {
+    padding: 0 40px;
+    font-size: 24px;
+  }
+
+  main#music ul li,
+  main#music o {
+    font-size: 24px;
+  }
+
+  main#contact {
+    padding: 0 40px;
+  }
+
+  nav ul li {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  p {
+    font-size: 10px;
+  }
+}
+
+@media(max-width: 768px) {
+  .duas-colunas > div {
+    width: 100%;
+  }
+
+  main#contact form,
+  main#contact form input,
+  main#contact form textarea,
+  footer {
+    font-size: 24px;
+  }
+
+  main#contact form .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-group button {
+    padding: 12px 25px;
+  }
+}
+
+@media(max-width: 425px) {
+  nav ul li {
+    padding: 10px;
+  }
+
+  .form-group button {
+    padding: 10px 20px;
+  }
+
+  section#concept p {
+    font-size: 5vw;
+  }
+
+  footer {
+    font-size: 1.5rem;
+  }
+}
+
+main,
+main#contact,
+main#music {
+  margin-top: 140px;
 }
